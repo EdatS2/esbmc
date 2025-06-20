@@ -100,7 +100,8 @@ set(ESBMC_CHERI_LLVM_NAME ${DEFAULT_CHERI_LLVM_NAME} CACHE STRING "Name of the e
 #############################
 # ESBMC_CLANG_HEADERS_BUNDLED: 'detect', On, Off
 set(ESBMC_CLANG_HEADERS_BUNDLED "detect" CACHE STRING "Bundle the Clang resource-dir headers (default: detect)")
-set(OVERRIDE_CLANG_HEADER_DIR "")
+set(OVERRIDE_CLANG_HEADER_DIR "" CACHE STRING "Override ClangConfig.cmake
+directory")
 set(Clang_DIR "${LLVM_DIR}" CACHE STRING "Clang Directory (if not set, this will be set to the LLVM_DIR")
 
 set(ESBMC_CHERI "" CACHE STRING "override CHERI-support enabled through detection of Clang")
